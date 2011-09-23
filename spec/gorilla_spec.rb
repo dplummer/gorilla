@@ -22,4 +22,13 @@ describe Gorilla do
       end
     end
   end
+
+  it "routes the environment" do
+    with_api(Gorilla) do
+      get_request({:path => '/env'}, err) do |c|
+        c.response_header.status.should == 200
+        c.response.should == "test"
+      end
+    end
+  end
 end
