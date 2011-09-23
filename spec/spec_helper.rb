@@ -1,5 +1,4 @@
-require 'rubygems'
-require 'goliath'
-require 'goliath/test_helper'
-
 require File.expand_path(File.join(File.dirname(__FILE__),'..','gorilla'))
+
+Bundler.setup(:default, :test)
+require 'goliath/test_helper'

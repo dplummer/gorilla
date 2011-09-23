@@ -1,4 +1,6 @@
-require 'goliath'
+require 'rubygems'
+require 'bundler'
+Bundler.require
 
 class Heartbeat < Goliath::API
   use Goliath::Rack::Validation::RequestMethod, %w(GET)
